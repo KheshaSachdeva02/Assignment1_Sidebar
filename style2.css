@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("wp5.jpg");
+}
+
+#container {
+  display: flex;
+  min-height: 100vh;
+  background-image: url("wp5.jpg");
+}
+
+#left-panel {
+  flex-basis: 14%;
+  background-color: #d7900ade;
+  color: #fff;
+  padding: 20px;
+}
+
+#left-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#left-panel ul li {
+  margin-bottom: 10px;
+}
+
+#left-panel ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#left-panel ul li a:hover {
+  background-color: #555;
+}
+
+#content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+  background-image: url("wp5.jpg");
+  border-radius: 5px;
+}
+
+#content > div {
+  margin: 15%;
+  padding: 5%;
+  display: none;
+  background-color: #d7900ade;
+  border-radius: 15px;
+}
+
+#content > div.active {
+  display: block;
+}
+
+h2 {
+  color: #26222c;
+  margin-bottom: 10px;
+}
+
+p {
+  color: rgb(13 11 37);
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 768px) {
+  #container {
+    flex-direction: column;
+  }
+
+  #left-panel {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  #content > div {
+    margin-top: 20px;
+  }
+}

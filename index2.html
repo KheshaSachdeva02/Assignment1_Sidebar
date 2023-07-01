@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Left Panel</title>
+    <link rel="stylesheet" href="style2.css" />
+
+    <script>
+      function showContent(component) {
+        var contentDivs = document.querySelectorAll("#content > div");
+
+        // Hide all content divs
+        contentDivs.forEach(function (div) {
+          div.classList.remove("active");
+        });
+
+        // Show the selected component's content
+        var selectedDiv = document.getElementById(component);
+        selectedDiv.classList.add("active");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="left-panel">
+        <ul>
+          <li><a href="#" onclick="showContent('home')">Home</a></li>
+          <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+          <li>
+            <a href="#" onclick="showContent('information')">About US</a>
+          </li>
+          <li><a href="#" onclick="showContent('guide')">Documentation</a></li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="home" class="active">
+          <h2>Welcome to the Home Page!</h2>
+          <p>I am KHESHA SACHDEVA. I'm a Computer Science Engineer.</p>
+        </div>
+        <div id="contact">
+          <h2>Contact Me</h2>
+          <p>Follow me on Instagram "_kheshasachdeva_".</p>
+        </div>
+        <div id="information">
+          <h2>About Me</h2>
+          <p>I'm a B.E graduate from Chandigarh University.</p>
+        </div>
+        <div id="guide">
+          <h2>Documentation</h2>
+          <p>This is the content page for documentation.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
